@@ -24,44 +24,44 @@
  * @param {Array<number>} nums
  * @returns {Array<number>} The given nums after being sorted.
  */
-// const bubbleSort = (nums) => {
-//     let temp = "";
-//     //console.log(nums.length);
-//     let i = 0;
-//     while(i < nums.length - 1){
-//         for(var x = 0; x < nums.length -i -1; x++){
-//             //console.log(x +1)
-//             if(nums[x] > nums[x+1]){
-//                 temp = nums[x+1]
-//                 nums[x+1] = nums[x]
-//                 nums[x] = temp
-//             }
-//         }
-//         i++
-//     }
-//     return nums;
-// }
-
-
 const bubbleSort = (nums) => {
-    let unsorted = true;
-    let valsToCheck = nums.length;
-
-    while(unsorted){
-        unsorted = false;
-        for(var i = 0; i < valsToCheck; i++){
-            unsorted = true;
-            if(nums[i] > nums[i+1]){
-                let temp = nums[i]
-                nums[i] = nums[i+1]
-                nums[i+1] = temp
+    let temp = "";
+    //console.log(nums.length);
+    let i = 0;
+    while(i < nums.length - 1){
+        for(var x = 0; x < nums.length -i -1; x++){
+            //console.log(x +1)
+            if(nums[x] > nums[x+1]){
+                temp = nums[x+1]
+                nums[x+1] = nums[x]
+                nums[x] = temp
             }
         }
-        valsToCheck--;
+        i++
     }
-
     return nums;
 }
+
+
+// const bubbleSort = (nums) => {
+//     let unsorted = true;
+//     let valsToCheck = nums.length;
+
+//     while(unsorted){
+//         unsorted = false;
+//         for(var i = 0; i < valsToCheck; i++){
+//             unsorted = true;
+//             if(nums[i] > nums[i+1]){
+//                 let temp = nums[i]
+//                 nums[i] = nums[i+1]
+//                 nums[i+1] = temp
+//             }
+//         }
+//         valsToCheck--;
+//     }
+
+//     return nums;
+// }
 
 
 const numsRandomOrder = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
