@@ -78,9 +78,6 @@ console.log("----------5----------")
 redBelt.attack(blackBelt);
 
 
-
-
-
 // 1	Make an instance of "Red Belt Ninja"
 // 1	Make an instance of "Hard Algorithm" and play it on "Red Belt Ninja"
 // 2	Make an instance "Black Belt Ninja"
