@@ -54,10 +54,5 @@ const flyingMon = pokémon.filter(p => p.types.includes("flying")).map(p => p.ty
 //console.log(flyingMon)
 
 // a count of the number of pokémon that are "normal" type
-
-// const normCount = pokémon.filter(p => p.types.includes("normal")).reduce(p => count, 0)
-
-// function count(total, num){
-//     return total + Math.round(num);
-// }
-// console.log(normCount)
+const normCount = pokémon.filter(p => p.types.includes("normal")).length
+console.log(normCount)
