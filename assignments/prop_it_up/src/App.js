@@ -4,6 +4,7 @@ import './App.css';
 import PersonCard from './components/PersonCard.js'
 
 function App() {
+
   return (
     <div className="App">
       <PersonCard firstName={"Jane"} lastName={"Doe"} age={420} hairColor={"Blue"}/>
