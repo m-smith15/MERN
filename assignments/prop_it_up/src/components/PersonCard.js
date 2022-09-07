@@ -8,7 +8,7 @@ class PersonCard extends Component {
         }
     }
 
-    handleClick = (e) => {
+    handleClick = () => {
         console.log(this.props.firstName + "'s button wuz clicked")
         console.log(this.state.age + 1)
         this.setState({ age: this.state.age += 1});
@@ -23,5 +23,4 @@ class PersonCard extends Component {
         </div>
     }
 }
-
 export default PersonCard;

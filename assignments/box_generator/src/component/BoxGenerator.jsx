@@ -5,7 +5,7 @@ const BoxGenerator = (props) => {
     // let boxes = ["blue", "blue", "blue"];
     const [color, setColor] = useState("");
     const [boxes, setBoxes] = useState([])
-
+    
     const createBox = (e) => {
         e.preventDefault();
         //console.log(color);
@@ -35,5 +35,4 @@ const BoxGenerator = (props) => {
         </div>
     )
 };
-
 export default BoxGenerator;
