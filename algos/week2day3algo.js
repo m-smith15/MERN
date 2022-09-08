@@ -62,27 +62,22 @@ function coronaVirusAtRisk(persons) {
     let results = [];
 
     for(let i = 0; i < persons.length; i++){
-        //console.log(i)
-        //console.log(persons[i].friends[0].firstName)
 
         if(persons[i].isSocialDistancing == false){
-            //console.log("false social dist")
 
             for(let j = 0; j < 2; j++){
                 let currentFriend = persons[i].friends[j];
-                //console.log("risky friend: " + currentFriend)
                 let testFriend = Object.values(currentFriend);
-                //console.log(testFriend[3])
                 if(testFriend[3] == true){
-                    let person2add = persons[i].firstName + " " + persons[i].lastName
-                    results.push(person2add)
+                    results.push(persons[i].firstName + " " + persons[i].lastName)
+                    break;
                 }
             }
         }
     }
     return results;
-
 }
+
 console.log(coronaVirusAtRisk(people));
 
 /**
