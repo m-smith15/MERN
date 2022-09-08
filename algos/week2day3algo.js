@@ -85,6 +85,12 @@ console.log(coronaVirusAtRisk(people));
  *    .map is another loop but not nested.
  * - Space: O(n) linear.
  */
-function coronaVirusAtRiskFunctional(persons) {}
+function coronaVirusAtRiskFunctional(persons) {
+        const notDistancing = persons.filter( person => ! person.isSocialDistancing);
+        const atRisk = notDistancing.filter( (person) => person.friends.reduce((atRisk, friend) => atRisk || (!friend.isSocialDistancing && friend.hasCovid)));
+        return atRisk.map(person=>`${person.firstName} ${person.lastName}`)
+    };
+
+console.log(coronaVirusAtRiskFunctional(people));
 
 /*****************************************************************************/
