@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export default () => {
+const ProductForm = (props) => {
     const [productTitle, setProductTitle] = useState("");
     const [price, setPrice] = useState(0);
     const [description, setDescription] = useState("");
@@ -33,9 +33,10 @@ export default () => {
             </div>
             <div>
                 <label>Description</label>
-                <input type="text" onChange={(e)=>setDescription(e.target.description)} value={description} />
+                <input type="text" onChange={(e)=>setDescription(e.target.value)} value={description} />
             </div>
             <button type="submit">Send it!</button>
         </form>
     )
 }
+export default ProductForm;
